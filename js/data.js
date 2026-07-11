@@ -5,7 +5,7 @@ const KIPLOKONES = [
     nom:"Flamou",
     type:"Feu",
     rarete:"Commune",
-    image:"images/kiplokones/flamou.png"
+    image:"images/cartes/flamou.png"
 },
 
 {
