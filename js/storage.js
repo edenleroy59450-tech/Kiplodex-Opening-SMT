@@ -2,25 +2,37 @@ function chargerSauvegarde(){
 
     let save = localStorage.getItem("kiplokones");
 
-    if(save==null){
 
-        save={
-            collection:[],
-            boosters:0
-        }
+    if(save === null){
 
-        localStorage.setItem("kiplokones",JSON.stringify(save));
+        let nouvelleSauvegarde = {
+            collection: [],
+            boosters: 0
+        };
 
-        return save;
+
+        localStorage.setItem(
+            "kiplokones",
+            JSON.stringify(nouvelleSauvegarde)
+        );
+
+
+        return nouvelleSauvegarde;
 
     }
+
 
     return JSON.parse(save);
 
 }
 
+
+
 function sauvegarder(data){
 
-    localStorage.setItem("kiplokones",JSON.stringify(data));
+    localStorage.setItem(
+        "kiplokones",
+        JSON.stringify(data)
+    );
 
 }
