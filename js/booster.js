@@ -1,15 +1,20 @@
-let save = chargerSauvegarde();
-
 document.getElementById("openBooster").onclick = function () {
 
+
+    let save = chargerSauvegarde();
+
+
     let resultat = document.getElementById("boosterResult");
+
 
     resultat.innerHTML = "";
 
 
     let random = Math.floor(Math.random() * KIPLOKONES.length);
 
+
     let carte = KIPLOKONES[random];
+
 
 
     save.collection.push(carte.id);
@@ -26,5 +31,6 @@ document.getElementById("openBooster").onclick = function () {
             <img src="${carte.image}" alt="${carte.nom}">
         </div>
     `;
+
 
 };
