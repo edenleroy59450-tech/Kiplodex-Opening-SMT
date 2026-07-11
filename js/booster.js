@@ -26,11 +26,13 @@ document.getElementById("openBooster").onclick = function () {
 
 
 
-    resultat.innerHTML = `
-        <div class="card">
-            <img src="${carte.image}" alt="${carte.nom}">
-        </div>
-    `;
+   resultat.innerHTML = `
+    <div class="card">
+        <h2>${carte.nom}</h2>
+        <p>${carte.type}</p>
+        <p>${carte.rarete}</p>
+    </div>
+`;
 
 
 };
