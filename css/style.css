@@ -1,133 +1,225 @@
-/* ===== STYLE GENERAL ===== */
+/* =========================
+   KIPLODEX - STYLE GENERAL
+========================= */
+
 
 body {
     margin: 0;
     padding: 0;
+
     background: #202020;
+
     font-family: Arial, sans-serif;
+
     color: white;
+
     text-align: center;
 }
 
 
-/* ===== TITRES ===== */
+/* =========================
+   TITRES
+========================= */
+
 
 h1 {
-    font-size: 40px;
     margin-top: 20px;
+
+    font-size: 40px;
+
     color: #ffd700;
 }
+
 
 h2 {
     color: white;
 }
 
 
-/* ===== ZONE DES BOOSTERS ===== */
+/* =========================
+   ZONE BOOSTER
+========================= */
+
 
 .booster-container {
+
+    width: 90%;
+
+    margin: 30px auto;
+
     display: flex;
+
     justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-top: 30px;
+
+    align-items: center;
+
+    gap: 15px;
+
+    flex-wrap: nowrap;
+
 }
 
 
-/* ===== CARTES KIPLOKONES ===== */
+/* =========================
+   CARTES
+========================= */
+
 
 .card {
-    width: 180px;
-    height: 250px;
+
+    width: 18%;
+
+    max-width: 200px;
+
+    aspect-ratio: 63 / 88;
+
 
     background: white;
-    border-radius: 15px;
+
+    border-radius: 12px;
+
 
     overflow: hidden;
 
+
     box-shadow: 0 0 15px black;
 
-    transition: transform 0.3s;
+
+    transition: transform 0.2s;
+
 }
+
 
 
 .card:hover {
-    transform: scale(1.08);
+
+    transform: scale(1.05);
+
 }
 
 
-/* IMAGE DE LA CARTE */
+
+/* IMAGE DES CARTES */
+
 
 .card img {
+
     width: 100%;
+
     height: 100%;
 
+
     object-fit: contain;
+
 }
 
 
-/* ===== KIPLODEX ===== */
+
+/* =========================
+   KIPLODEX
+========================= */
+
 
 .kiplodex {
+
+    width: 90%;
+
+    margin: auto;
+
+
     display: flex;
-    justify-content: center;
+
     flex-wrap: wrap;
 
-    gap: 20px;
+    justify-content: center;
 
-    margin: 30px;
+
+    gap: 15px;
+
 }
+
 
 
 .kiplodex .card {
-    width: 150px;
-    height: 210px;
+
+    width: 12%;
+
 }
 
 
 
-/* ===== BOUTONS ===== */
+/* =========================
+   BOUTONS
+========================= */
+
 
 button {
+
     background: #ffd700;
 
+    color: black;
+
+
     border: none;
+
     border-radius: 10px;
 
-    padding: 15px 30px;
+
+    padding: 12px 25px;
+
 
     font-size: 18px;
+
     font-weight: bold;
+
 
     cursor: pointer;
 
+
     margin: 20px;
+
 }
+
 
 
 button:hover {
+
     background: orange;
+
 }
 
 
 
-/* ===== ANIMATION OUVERTURE BOOSTER ===== */
+/* =========================
+   ANIMATION OUVERTURE
+========================= */
+
 
 .opening {
-    animation: openCard 0.5s;
+
+    animation: apparition 0.5s;
+
 }
 
 
-@keyframes openCard {
+
+@keyframes apparition {
 
     from {
+
         transform: scale(0);
+
         opacity: 0;
+
     }
 
+
     to {
+
         transform: scale(1);
+
         opacity: 1;
+
     }
 
 }
