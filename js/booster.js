@@ -1,14 +1,14 @@
-let save=chargerSauvegarde();
+let save = chargerSauvegarde();
 
-document.getElementById("openBooster").onclick=function(){
+document.getElementById("openBooster").onclick = function () {
 
-    let resultat=document.getElementById("boosterResult");
+    let resultat = document.getElementById("boosterResult");
 
-    resultat.innerHTML="";
+    resultat.innerHTML = "";
 
-    let random=Math.floor(Math.random()*KIPLOKONES.length);
+    let random = Math.floor(Math.random() * KIPLOKONES.length);
 
-    let carte=KIPLOKONES[random];
+    let carte = KIPLOKONES[random];
 
     save.collection.push(carte.id);
 
@@ -16,18 +16,24 @@ document.getElementById("openBooster").onclick=function(){
 
     sauvegarder(save);
 
-    resultat.innerHTML=`
+    if (carte.image) {
 
-    <div class="card">
+        resultat.innerHTML = `
+            <div class="card">
+                <img src="${carte.image}" alt="${carte.nom}" class="card-image">
+            </div>
+        `;
 
-        <h2>${carte.nom}</h2>
+    } else {
 
-        <p>Type : ${carte.type}</p>
+        resultat.innerHTML = `
+            <div class="card">
+                <h2>${carte.nom}</h2>
+                <p>Type : ${carte.type}</p>
+                <p>Rareté : ${carte.rarete}</p>
+            </div>
+        `;
 
-        <p>Rareté : ${carte.rarete}</p>
-
-    </div>
-
-    `;
+    }
 
 }
